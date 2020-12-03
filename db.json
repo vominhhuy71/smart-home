@@ -1,0 +1,43 @@
+{
+  "main": [
+    {
+      "name": "thermistor",
+      "id": 1,
+      "value": 20
+    },
+    {
+      "name": "haveKey",
+      "id": 2,
+      "value": true
+    },
+    {
+      "name": "haveMotion",
+      "id": 3,
+      "value": false
+    },
+    {
+      "name": "lvLight",
+      "id": 4,
+      "value": false
+    },
+    {
+      "name": "bedLight",
+      "id": 5,
+      "value": true
+    },
+    {
+      "name": "keys",
+      "id": 6,
+      "value": [
+        {
+          "id": 0,
+          "key": "some number"
+        },
+        {
+          "id": 1,
+          "key": 123456
+        }
+      ]
+    }
+  ]
+}

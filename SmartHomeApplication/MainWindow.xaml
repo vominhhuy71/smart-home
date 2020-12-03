@@ -1,0 +1,69 @@
+﻿<Window x:Class="SmartHomeApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartHomeApplication"
+        mc:Ignorable="d"
+        WindowChrome.IsHitTestVisibleInChrome="True"
+        Title="Smart Home Application" Height="450" Width="798.8" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="93*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="61*"/>
+                <ColumnDefinition Width="68*"/>
+            </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Left" Height="87" Margin="23,147,0,0" VerticalAlignment="Top" Width="271" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.095"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="239.2"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Indoor:" HorizontalAlignment="Left" Margin="0,-8,0,58" FontSize="20" Width="73"/>
+                <TextBox HorizontalAlignment="Left" BorderThickness="0" IsReadOnly="True" Height="87" FontSize="30" Margin="0,0,0,-37" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="186" TextChanged="TextBox_TextChanged1" x:Name="InTemp" Text="Null"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="87" Margin="118,0,0,0" VerticalAlignment="Top" Width="93">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Outdoor:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="292,69.8,-289,-88.8" Grid.Row="2"/>
+                <TextBox HorizontalAlignment="Left" BorderThickness="0" IsReadOnly="True" Height="87" FontSize="30" Margin="292,112.8,-543,-183.8" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" TextChanged="TextBox_TextChanged2" x:Name="OutTemp" Text="Null" Grid.Row="2"/>
+            </Grid>
+            <TextBox Text="Date_Time" HorizontalAlignment="Left" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Top" FontSize="30" Width="339" Height="118" TextChanged="TextBox_DateTime" Name="Date_Time"/>
+            <Grid HorizontalAlignment="Left" Height="118" Margin="44.6,0,0,0" VerticalAlignment="Top" Width="269" Grid.Column="1">
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" Width="131" FontSize="20" Content="Security:"/>
+                <TextBox HorizontalAlignment="Left" Height="58" Margin="92,4,0,0" TextWrapping="Wrap" Text="No Violation!" VerticalAlignment="Top" Width="177" FontSize="20" BorderThickness="0" IsReadOnly="True" TextChanged="TextBox3_TextChanged" Name="Security"/>
+                <Button Content="Yes" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="82" Click="Button1_Click" Name="button1" Height="24"/>
+                <Button Content="No" HorizontalAlignment="Left" Margin="168,67,0,0" VerticalAlignment="Top" Width="82"  Click="Button2_Click" Name="button2" Height="24"/>
+                <Button Content="Lock" HorizontalAlignment="Left" Margin="249,4,-62,0" VerticalAlignment="Top" Width="82" Click="Button_Click_Lock" Height="34" Name="button3"/>
+
+            </Grid>
+            <Label Content="Status:" HorizontalAlignment="Left" Margin="24,267,0,0" VerticalAlignment="Top" FontSize="20" Width="70"/>
+            <Label Content="Status:" HorizontalAlignment="Left" Margin="44.6,267,0,0" VerticalAlignment="Top" FontSize="20" Width="70" Grid.Column="1"/>
+            <TextBox Name="bedLight" HorizontalAlignment="Left" Height="46" Margin="118,275,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChangedBedLight" FontSize="30" BorderThickness="0" IsReadOnly="True"/>
+            <TextBox Name ="lvLight" HorizontalAlignment="Left" Height="46" Margin="147.6,275,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChangedLvLight" FontSize="30" Grid.Column="1" BorderThickness="0" IsReadOnly="True"/>
+            <Button Content="Bed Light" HorizontalAlignment="Left" Margin="24,330,0,0" VerticalAlignment="Top" Width="92" Height="36" Click="Button_Click_bL"/>
+            <Button Content="Livingroom Light" HorizontalAlignment="Left" Margin="44.6,330,0,0" VerticalAlignment="Top" Width="144" Height="36" Grid.Column="1" Click="Button_Click_lvR"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="130" Margin="-16,121,-19.6,0" VerticalAlignment="Top" Width="810" Grid.ColumnSpan="2"/>
+        </Grid>
+
+    </Grid>
+</Window>
